@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "tailwindcss";
+
+/* Typing animation */
+@keyframes typingDots {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+
+.typing-dots::after {
+  content: "";
+  animation: typingDots 1s infinite;
+}
+
+/* Markdown formatting for AI messages */
+.markdown-content h3 {
+  @apply font-bold text-lg mt-3 mb-1 text-gray-800;
+}
+
+.markdown-content ul {
+  @apply list-disc ml-5 mb-2 text-gray-700;
+}
+
+.markdown-content strong {
+  @apply font-semibold text-gray-900;
+}
+
+.markdown-content p {
+  @apply mb-2 leading-relaxed;
+}
+
+.markdown-content code {
+  @apply bg-gray-200 rounded px-1 py-0.5 text-sm font-mono text-gray-800;
+}
